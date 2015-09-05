@@ -11,7 +11,6 @@ import org.usfirst.frc.team2976.robot.commands.ExampleCommand;
  */
 public class OI {
 	
-<<<<<<< HEAD
 	/* 
 	 * Joystick(port 0) = xbox controller on PC usb port 0
 	 * Joystick(port 1) = xbox controller on PC usb port 1
@@ -21,10 +20,6 @@ public class OI {
 	
 	public static Joystick LeftJoyStick = new Joystick(3);
 	public static Joystick RightJoyStick = new Joystick(4);
-=======
-	public static Joystick LeftJoyStick = new Joystick(1);
-	public static Joystick RightJoyStick = new Joystick(2);
->>>>>>> 166231d603843cab43fa1cfb93f76042c2a654ca
 	
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
