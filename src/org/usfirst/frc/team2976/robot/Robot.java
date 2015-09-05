@@ -24,10 +24,16 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	
+<<<<<<< HEAD
     public static final Command DriveBOT = new DriveBOT();
     Command autonomousCommand;
     
     
+=======
+    Command autonomousCommand;
+    Command DriveBOT;
+
+>>>>>>> 166231d603843cab43fa1cfb93f76042c2a654ca
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -80,7 +86,11 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+<<<<<<< HEAD
 
+=======
+        DriveBOT = new DriveBOT();
+>>>>>>> 166231d603843cab43fa1cfb93f76042c2a654ca
     }
     
     /**
