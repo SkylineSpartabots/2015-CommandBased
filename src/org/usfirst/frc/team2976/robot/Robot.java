@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team2976.robot.commands.ExampleCommand;
+import org.usfirst.frc.team2976.robot.commands.DriveBOT;
 import org.usfirst.frc.team2976.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team2976.robot.subsystems.ExampleSubsystem;
 
@@ -23,10 +24,10 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	
-
-
+    public static final Command DriveBOT = new DriveBOT();
     Command autonomousCommand;
-
+    
+    
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -35,6 +36,7 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
+
     }
 	
 	public void disabledPeriodic() {
@@ -43,7 +45,9 @@ public class Robot extends IterativeRobot {
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-        if (autonomousCommand != null) autonomousCommand.start();
+        if (autonomousCommand != null) {
+        	autonomousCommand.start();
+        }
     }
 
     /**
@@ -59,6 +63,8 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+        
+        DriveBOT.start();
     }
 
     /**
@@ -74,6 +80,7 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+
     }
     
     /**
