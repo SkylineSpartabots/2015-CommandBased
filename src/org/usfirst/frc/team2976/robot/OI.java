@@ -1,6 +1,5 @@
 package org.usfirst.frc.team2976.robot;
 
-import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 
@@ -21,8 +20,6 @@ public class OI {
 	
 	public static Joystick LeftJoyStick = new Joystick(3);
 	public static Joystick RightJoyStick = new Joystick(4);
-	
-	public static AnalogInput PotentiometerInput = new AnalogInput(0);
 	
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.

@@ -9,7 +9,6 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team2976.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2976.robot.commands.DriveBOT;
-import org.usfirst.frc.team2976.robot.commands.PotentiometerCommand;
 import org.usfirst.frc.team2976.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team2976.robot.subsystems.ExampleSubsystem;
 
@@ -27,7 +26,6 @@ public class Robot extends IterativeRobot {
 	
 
     public static final Command DriveBOT = new DriveBOT();
-    public static final Command PotC = new PotentiometerCommand();
     Command autonomousCommand;
 
     /**
@@ -67,7 +65,6 @@ public class Robot extends IterativeRobot {
         if (autonomousCommand != null) autonomousCommand.cancel();
         
         DriveBOT.start();
-        PotC.start();
     }
 
     /**
